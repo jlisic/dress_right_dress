@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1225"/>
+      <stop offset="60%" stop-color="#0c1e3a"/>
+      <stop offset="100%" stop-color="#112a4a"/>
+    </linearGradient>
+    <linearGradient id="gold_grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c8a84e"/>
+      <stop offset="50%" stop-color="#e8d080"/>
+      <stop offset="100%" stop-color="#b89840"/>
+    </linearGradient>
+    <linearGradient id="blue_grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0060a8"/>
+      <stop offset="100%" stop-color="#003d6b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <!-- Star shape -->
+    <polygon id="star5" points="0,-12 3,-4 12,-4 5,2 7,11 0,6 -7,11 -5,2 -12,-4 -3,-4" fill="url(#gold_grad)"/>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="320" fill="url(#sky)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.06" stroke="#4488bb" stroke-width="0.5">
+    <line x1="0" y1="0" x2="900" y2="320"/>
+    <line x1="100" y1="0" x2="900" y2="267"/>
+    <line x1="200" y1="0" x2="900" y2="233"/>
+    <line x1="0" y1="53" x2="800" y2="320"/>
+    <line x1="0" y1="107" x2="700" y2="320"/>
+    <line x1="900" y1="0" x2="0" y2="320"/>
+    <line x1="800" y1="0" x2="0" y2="267"/>
+    <line x1="700" y1="0" x2="0" y2="233"/>
+    <line x1="900" y1="53" x2="100" y2="320"/>
+    <line x1="900" y1="107" x2="200" y2="320"/>
+  </g>
+
+  <!-- Decorative horizontal lines -->
+  <rect x="0" y="0" width="900" height="3" fill="url(#gold_grad)" opacity="0.8"/>
+  <rect x="0" y="317" width="900" height="3" fill="url(#gold_grad)" opacity="0.8"/>
+  <line x1="60" y1="58" x2="380" y2="58" stroke="#c8a84e" stroke-width="1" opacity="0.4"/>
+  <line x1="520" y1="58" x2="840" y2="58" stroke="#c8a84e" stroke-width="1" opacity="0.4"/>
+  <line x1="60" y1="262" x2="840" y2="262" stroke="#c8a84e" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Central emblem circle -->
+  <circle cx="450" cy="135" r="68" fill="none" stroke="url(#blue_grad)" stroke-width="3" opacity="0.9"/>
+  <circle cx="450" cy="135" r="58" fill="none" stroke="url(#gold_grad)" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="450" cy="135" r="50" fill="#0c1e3a" stroke="url(#blue_grad)" stroke-width="1" opacity="0.8"/>
+
+  <!-- Star in emblem -->
+  <g transform="translate(450,122) scale(1.8)" filter="url(#glow)">
+    <use href="#star5"/>
+  </g>
+
+  <!-- Wings on the emblem -->
+  <g opacity="0.7">
+    <!-- Left wing -->
+    <path d="M382,135 Q360,115 320,108 Q340,125 345,135 Q340,145 320,162 Q360,155 382,135Z" fill="url(#gold_grad)" opacity="0.5"/>
+    <path d="M382,135 Q365,120 335,115 Q350,128 355,135 Q350,142 335,155 Q365,150 382,135Z" fill="url(#gold_grad)" opacity="0.3"/>
+    <!-- Right wing -->
+    <path d="M518,135 Q540,115 580,108 Q560,125 555,135 Q560,145 580,162 Q540,155 518,135Z" fill="url(#gold_grad)" opacity="0.5"/>
+    <path d="M518,135 Q535,120 565,115 Q550,128 545,135 Q550,142 565,155 Q535,150 518,135Z" fill="url(#gold_grad)" opacity="0.3"/>
+  </g>
+
+  <!-- USAF text in emblem -->
+  <text x="450" y="155" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="url(#gold_grad)" letter-spacing="4">USAF</text>
+
+  <!-- Formation dots (left group) -->
+  <g opacity="0.5">
+    <g fill="#5090cc">
+      <!-- Left formation -->
+      <circle cx="100" cy="130" r="4"/><circle cx="120" cy="130" r="4"/><circle cx="140" cy="130" r="4"/><circle cx="160" cy="130" r="4"/>
+      <circle cx="100" cy="148" r="4"/><circle cx="120" cy="148" r="4"/><circle cx="140" cy="148" r="4"/><circle cx="160" cy="148" r="4"/>
+      <circle cx="100" cy="166" r="4"/><circle cx="120" cy="166" r="4"/><circle cx="140" cy="166" r="4"/><circle cx="160" cy="166" r="4"/>
+    </g>
+    <!-- Direction arrow left -->
+    <line x1="130" y1="115" x2="130" y2="100" stroke="#c8a84e" stroke-width="1.5"/>
+    <polygon points="130,96 125,104 135,104" fill="#c8a84e"/>
+
+    <g fill="#5090cc">
+      <!-- Right formation -->
+      <circle cx="740" cy="130" r="4"/><circle cx="760" cy="130" r="4"/><circle cx="780" cy="130" r="4"/><circle cx="800" cy="130" r="4"/>
+      <circle cx="740" cy="148" r="4"/><circle cx="760" cy="148" r="4"/><circle cx="780" cy="148" r="4"/><circle cx="800" cy="148" r="4"/>
+      <circle cx="740" cy="166" r="4"/><circle cx="760" cy="166" r="4"/><circle cx="780" cy="166" r="4"/><circle cx="800" cy="166" r="4"/>
+    </g>
+    <!-- Direction arrow right -->
+    <line x1="830" y1="148" x2="845" y2="148" stroke="#c8a84e" stroke-width="1.5"/>
+    <polygon points="849,148 841,143 841,153" fill="#c8a84e"/>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="220" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="url(#gold_grad)" filter="url(#shadow)" letter-spacing="3">DRESS RIGHT DRESS</text>
+
+  <!-- Subtitle -->
+  <text x="450" y="248" text-anchor="middle" font-family="'Courier New', Consolas, monospace" font-size="15" fill="#7090b0" letter-spacing="5">USAF DRILL &amp; CEREMONY SIMULATOR</text>
+
+  <!-- Bottom tagline -->
+  <text x="450" y="285" text-anchor="middle" font-family="'Courier New', Consolas, monospace" font-size="11" fill="#506880" letter-spacing="2">BASED ON AFMAN 36-2203 · DRILL AND CEREMONIES</text>
+
+  <!-- Small stars decoration bottom -->
+  <g transform="translate(350,300) scale(0.5)"><use href="#star5" opacity="0.3"/></g>
+  <g transform="translate(450,300) scale(0.5)"><use href="#star5" opacity="0.3"/></g>
+  <g transform="translate(550,300) scale(0.5)"><use href="#star5" opacity="0.3"/></g>
+</svg>
